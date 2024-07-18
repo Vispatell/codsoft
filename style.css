@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #000000;
+    color: #fff;
+}
+
+.header {
+    padding: 1.5% 5% 1.5% 5%;
+}
+
+.logo {
+    font-size: 3.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: large;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+
+
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.text-container {
+    margin-top: 5%;
+    /* padding-left: 59.275px; */
+}
+
+.text-container .left h1 {
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.text-container .left h1 span {
+    color: #ff004f;
+}
+
+.text-container .left p {
+    font-size: 30px;
+}
+
+.right {
+    background-image: url(sticker.png);
+    width: 50%;
+    height: 500px;
+    background-size: 550px;
+    background-position: center;
+    mix-blend-mode: luminosity;
+    transition: 1s;
+}
+
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right:hover {
+    background-size: 560px;
+    mix-blend-mode: normal;
+}
+
+
+
+.about {
+    padding: 80px 0;
+}
+
+.container-1 .left-1 img {
+    width: 350px;
+    height: 350px;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5% 5% 1.5% 5%;
+}
+
+.left-1 {
+    flex-basis: 35%;
+}
+
+.left-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+.right-1 {
+    flex-basis: 60%;
+}
+
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.right-1 p {
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 1rem;
+}
+
+.tab-title {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+
+}
+
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+
+
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-content ul li {
+    list-style: none;
+    margin: 10px 0;
+    color: #b54769;
+    font-size: 1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+
+.services {
+    padding: 20px 0;
+
+}
+
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 10px 30px;
+}
+
+
+.service-list div p {
+    text-align: start;
+    margin-bottom: 5px;
+
+
+}
+
+.service-list div a {
+    text-decoration: none;
+    color: #fff;
+
+    font-size: 12px;
+
+}
+
+
+.service-list div {
+    padding: 40px;
+    background-color: #262626;
+    font-size: 0.85rem;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.service-list h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.service-list div:hover {
+    background-color: #ff004f;
+    transform: translateY(-10px);
+}
+
+
+.portfolio {
+    padding: 20px 0;
+
+}
+
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 10px 30px;
+
+}
+
+.work-list .work img {
+    border-radius: 15px;
+    width: 100%;
+    transition: all 0.3s ease-in;
+}
+
+
+.shead {
+    padding-left: 30px;
+}
+
+.work {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.work-list .work img:hover {
+    transform: scale(1.1);
+}
+
+.contact{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-form{
+    flex-basis: 50%;
+    width: 100%;
+    
+}
+
+.contact-form form input{
+    width: 100%;
+}
+.contact-form form textarea{
+    width: 100%;
+}
+
+.contact .container{
+    flex-basis: 30%;
+}
+
+
+.contact-list{
+    padding: 30px 35px;
+ 
+}
+
+.contact-list p {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.contact-list p span {
+    margin-right: 10px;
+
+}
+.contact-list p span i{
+
+    font-size: 25px;
+    color: #ff004f;
+
+}
+
+.btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: #ababab;
+    padding: 12px;
+    font-weight: 100;
+    font-size: 18px;
+    margin-left: 45px;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    background-color: #ff004f;
+
+}
+
+
+.contact-form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  
+  
+ 
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  textarea {
+    resize: none;
+    height: 80px;
+    width: 200px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff6384;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #ababab;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form input,.contact-form textarea{
+    background-color: #262626;
+  }
+
+  .contact-form button[type="submit"]:hover{
+    background: #ff004f;
+    transition: all 0.2s;
+  }
